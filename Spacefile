@@ -1,1 +1,14 @@
-
+v: 0
+micros:
+  - name: ais-collector
+    src: ./
+    engine: python3.9
+    run: python main.py
+    primary: true
+    public: false
+    presets:
+      env:
+        - name: AIS_API_KEY
+        - name: AIRTABLE_API_KEY
+        - name: AIRTABLE_BASE_ID
+        - name: AIRTABLE_TABLE_NAME
